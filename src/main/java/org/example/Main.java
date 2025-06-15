@@ -2,15 +2,21 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
+        Dog dog = Dog.builder()
+                .name("Dog")
+                .age(10)
+                .color("brown")
+                .build();
 
-        Dog dog = new Dog("Dog", 1, "red");
-        Animal animal = new Animal("Animal", 2);
+        Animal animal = Animal.builder()
+                .name("Animal")
+                .age(5)
+                .build();
 
-        dog.sound();
-        animal.sound();
-        animal.sound("tes");
+        dog.sound();                     // Dog sound
+        animal.sound();                 // sound
+        animal.sound("tes");            // sound tes
 
-
+        System.out.println(dog);        // вывод с @ToString
     }
-
 }
